@@ -17,7 +17,7 @@ public class TVShowController {
 
     @PostMapping
     public ResponseEntity<TVShow> createTVShow(@RequestBody TVShow tvShow) {
-        tvShow.setShowId(tvShowService.getAllTVShows().size() + 1);  // Assign showId
+        tvShow.setShowId(tvShowService.getAllTVShows().size() + 1);  
         return ResponseEntity.ok(tvShowService.createTVShow(tvShow));
     }
 

@@ -17,7 +17,7 @@ public class MovieController {
 
     @PostMapping
     public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
-        movie.setMovieId(movieService.getAllMovies().size() + 1);  // Assign movieId
+        movie.setMovieId(movieService.getAllMovies().size() + 1);  
         return ResponseEntity.ok(movieService.createMovie(movie));
     }
 

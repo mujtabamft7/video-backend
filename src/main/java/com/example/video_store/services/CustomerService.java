@@ -23,7 +23,7 @@ public class CustomerService {
     public Customer registerCustomer(Customer customer) {
         customer.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
         if (customer.getCustomerId() == 0) {
-            customer.setCustomerId(1); // Set to 1 if customerId is not provided or is 0
+            customer.setCustomerId(1); 
         }
         return customerRepository.save(customer);
     }

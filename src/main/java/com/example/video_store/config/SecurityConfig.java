@@ -16,7 +16,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("/api/customers/register", "/api/customers/login").permitAll()
-                .requestMatchers("/api/customers/**").permitAll()  // Allow access to all customer endpoints
+                .requestMatchers("/api/customers/**").permitAll()  
                 .requestMatchers("/api/movies/**").permitAll()
                 .requestMatchers("/api/tvshows/**").permitAll()
                 .anyRequest().authenticated()
