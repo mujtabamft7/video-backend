@@ -24,6 +24,8 @@ public class SecurityConfig {
                 .requestMatchers("/api/tvshows/**").permitAll()
                 .anyRequest().authenticated()
             )
+            .cors()
+            .and()
             .addFilter(corsFilter());
         return http.build();
     }
@@ -32,7 +34,7 @@ public class SecurityConfig {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*");  
+        config.addAllowedOrigin("https://jovial-custard-7ee4c1.netlify.app");  // Allow your frontend's origin
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setAllowCredentials(true);
