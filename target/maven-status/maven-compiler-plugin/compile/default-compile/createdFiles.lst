@@ -1,0 +1,17 @@
+com\example\video_store\controllers\MovieController.class
+com\example\video_store\config\SecurityConfig.class
+com\example\video_store\services\CustomerService.class
+com\example\video_store\models\Customer.class
+com\example\video_store\models\TVShow.class
+com\example\video_store\repositories\TVShowRepository.class
+com\example\video_store\config\ApplicationConfig.class
+com\example\video_store\controllers\LoginRequest.class
+com\example\video_store\services\MovieService.class
+com\example\video_store\controllers\CustomerController.class
+com\example\video_store\config\CorsConfig.class
+com\example\video_store\repositories\MovieRepository.class
+com\example\video_store\models\Movie.class
+com\example\video_store\repositories\CustomerRepository.class
+com\example\video_store\services\TVShowService.class
+com\example\video_store\controllers\TVShowController.class
+com\example\video_store\VideoStoreApplication.class

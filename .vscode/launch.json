@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-VideoStoreApplication<video-store>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.video_store.VideoStoreApplication",
+            "projectName": "video-store",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

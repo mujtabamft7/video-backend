@@ -1,0 +1,16 @@
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\config\ApplicationConfig.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\config\CorsConfig.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\config\SecurityConfig.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\controllers\CustomerController.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\controllers\MovieController.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\controllers\TVShowController.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\models\Customer.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\models\Movie.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\models\TVShow.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\repositories\CustomerRepository.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\repositories\MovieRepository.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\repositories\TVShowRepository.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\services\CustomerService.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\services\MovieService.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\services\TVShowService.java
+C:\Users\MujLo\OneDrive\سطح المكتب\video-store-backend 3\video-store-backend\src\main\java\com\example\video_store\VideoStoreApplication.java
