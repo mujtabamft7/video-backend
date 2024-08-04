@@ -24,17 +24,17 @@ public class SecurityConfig {
                 .requestMatchers("/api/tvshows/**").permitAll()
                 .anyRequest().authenticated()
             )
-            .cors(); // Enable CORS support
+            .cors().configurationSource(corsConfigurationSource()); // Enable CORS support
         return http.build();
     }
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("https://jovial-custard-7ee4c1.netlify.app"); // Your frontend origin
+        config.addAllowedOriginPattern("*"); // Allow all origins
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
-        config.setAllowCredentials(true);
+        // Do not set allowCredentials for now
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
