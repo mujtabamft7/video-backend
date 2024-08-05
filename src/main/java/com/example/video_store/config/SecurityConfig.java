@@ -23,6 +23,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/movies/**").permitAll()
                 .requestMatchers("/api/tvshows/**").permitAll()
                 .anyRequest().authenticated()
+                
             )
             .cors(cors -> cors.configurationSource(corsConfigurationSource()));
         return http.build();
@@ -35,6 +36,7 @@ public class SecurityConfig {
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setAllowCredentials(true);
+        config.addAllowedOrigin("https://jovial-custard-7ee4c1.netlify.app");
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
