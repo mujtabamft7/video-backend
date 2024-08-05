@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://jovial-custard-7ee4c1.netlify.app")
 @RequestMapping("/api/tvshows")
 public class TVShowController {
     @Autowired
