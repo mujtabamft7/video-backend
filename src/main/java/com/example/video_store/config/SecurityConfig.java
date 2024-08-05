@@ -35,7 +35,7 @@ public class SecurityConfig {
         config.addAllowedOriginPattern("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
-        config.setAllowCredentials(true);
+        config.setAllowCredentials(false);
         config.addAllowedOrigin("https://jovial-custard-7ee4c1.netlify.app");
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
