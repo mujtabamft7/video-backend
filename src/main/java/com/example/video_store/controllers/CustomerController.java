@@ -12,13 +12,14 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/customers")
 @CrossOrigin(origins = "https://jovial-custard-7ee4c1.netlify.app")
-
 public class CustomerController {
+
     @Autowired
     private CustomerService customerService;
 
     @PostMapping("/register")
     public ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer) {
+        customer.setCustomerId(customerService.getAllCustomers().size() + 1); 
         return ResponseEntity.ok(customerService.registerCustomer(customer));
     }
 
@@ -56,7 +57,6 @@ class LoginRequest {
     private String email;
     private String password;
 
-   
     public String getEmail() {
         return email;
     }

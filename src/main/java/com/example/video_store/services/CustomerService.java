@@ -8,28 +8,33 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class CustomerService {
+
     @Autowired
     private CustomerRepository customerRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    private AtomicInteger customerIdCounter = new AtomicInteger(1);
-
     public Customer registerCustomer(Customer customer) {
         customer.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
-        if (customer.getCustomerId() == 0) {
-            customer.setCustomerId(1); 
-        }
+        customer.setCustomerId(getNextCustomerId()); 
         return customerRepository.save(customer);
     }
 
-    public Optional<Customer> getCustomerById(String id) {
-        return customerRepository.findById(id);
+    private int getNextCustomerId() {
+        List<Customer> customers = customerRepository.findAll();
+        if (customers.isEmpty()) {
+            return 1;
+        } else {
+            return customers.stream().mapToInt(Customer::getCustomerId).max().getAsInt() + 1;
+        }
+    }
+
+    public Optional<Customer> getCustomerByCustomerId(int customerId) {
+        return customerRepository.findByCustomerId(customerId);
     }
 
     public Optional<Customer> login(String email, String password) {
@@ -42,10 +47,6 @@ public class CustomerService {
 
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
-    }
-
-    public Optional<Customer> getCustomerByCustomerId(int customerId) {
-        return customerRepository.findByCustomerId(customerId);
     }
 
     public void deleteCustomer(String id) {
