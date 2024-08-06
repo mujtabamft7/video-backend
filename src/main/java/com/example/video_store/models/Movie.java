@@ -19,6 +19,7 @@ public class Movie {
     private String plot;
     private String posterUrl;
     private double rent;
+    //
     private double buy;
     private String trailerUrl;
     private boolean isFeatured;
